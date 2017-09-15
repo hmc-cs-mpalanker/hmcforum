@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20170915031333) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_posts_on_group_id"
   end
 
 end
