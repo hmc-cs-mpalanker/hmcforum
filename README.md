@@ -1,5 +1,16 @@
 # hmcforum
 
+## Contents
+
+* [Summary](#summary)
+* [Contributorss](#contributors)
+* [MVP Objectives](#mvp_objectives)
+* [Functionality](#functionality)
+* [Architecture](#architecture)
+* [Past Issues](#past_issues)
+* [Known Bugs](#known_bugs)
+* [References](#references)
+
 ## Summary
 
 A website which allows communication between Mudders on the topics that are important to them be that *text* memes or current campus issues. This should allow wider access to these communications then email and help avoid some of the clutter that we find in our email inboxes.
@@ -32,7 +43,7 @@ We utilize the Devise gem for collecting and using user data when it comes to re
 
 We utilize the Bare bootstrap template wih some modifications for the Navigation Bar.
 
-## Issues
+## Past Issues
 
 * We had some git issues with pushing and pulling when we first started the project. Those were resolved by manually pointing each local repository at the correct URL.
 * We had some merge conflicts with regards to the Devise database set-up and the default Ruby on Rails set-up. Minor edits were made to both files to merge the conflicts.
