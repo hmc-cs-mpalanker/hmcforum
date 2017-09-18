@@ -19,6 +19,8 @@ A website which allows communication between Mudders on the topics that are impo
 
 ## Architecture
 
-## Known Bugs
+## Known Issues 
+
+* Add My Profile Page in nav bar
 
 ## References
