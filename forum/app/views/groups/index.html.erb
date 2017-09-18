@@ -1,2 +1,19 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+<h1>Threads</h1>
+
+<%- if current_user %>
+	<%= link_to 'New thread', new_group_path %>
+<% end %>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th colspan="1"></th>
+  </tr>
+ 
+  <% @groups.each do |group| %>
+    <tr>
+      <td><%= group.title %></td>
+      <td><%= link_to 'Show', group_path(group) %></td>
+    </tr>
+  <% end %>
+</table>
