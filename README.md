@@ -44,3 +44,9 @@ We utilize the Bare bootstrap template wih some modifications for the Navigation
 * The code for the navigation bar was almost entirely based off of the navigation bar for the Bare
   bootstrap template as it was modified for the tutorial found at this link: https://www.youtube.
   com/watch?v=MpFO4Zr0EPE
+
+* The information for how to color texts was found at this URL: https://www.w3schools.com/css/css_text.asp
+
+* The information for how to improve text boxes was found at this URL: https://www.safaribooksonline.com/library/view/learning-rails/9780596154943/ch06s04.html
+
+* The information for how to have default text in text boxes was found at this URL: https://stackoverflow.com/questions/6007219/how-to-add-default-value-for-html-textarea
