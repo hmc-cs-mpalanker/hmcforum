@@ -50,3 +50,7 @@ We utilize the Bare bootstrap template wih some modifications for the Navigation
 * The information for how to improve text boxes was found at this URL: https://www.safaribooksonline.com/library/view/learning-rails/9780596154943/ch06s04.html
 
 * The information for how to have default text in text boxes was found at this URL: https://stackoverflow.com/questions/6007219/how-to-add-default-value-for-html-textarea
+
+* Basic Rails setup: http://guides.rubyonrails.org/getting_started.html
+
+* Info about devise: https://github.com/plataformatec/devise/wiki
