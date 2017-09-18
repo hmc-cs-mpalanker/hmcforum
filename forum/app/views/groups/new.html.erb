@@ -1,6 +1,6 @@
 <h1>New Thread</h1>
 
-<%= form_with url: groups_new_path, local: true do |form| %>
+<%= form_with model: @group, local: true do |form| %>
  
   <% if @group.errors.any? %>
     <div id="error_explanation">
@@ -27,4 +27,4 @@
  
 <% end %>
 
-<%= link_to 'Back', groups_index_path %>
+<%= link_to 'Back', root_path %>

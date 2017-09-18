@@ -7,17 +7,22 @@ class GroupsController < ApplicationController
 		@group = Group.new(group_params) 
 
 		if @group.save
-			redirect_to groups_index_path
+			redirect_to @group
 		else
 			render 'new'
 		end
 	end
 
   def show
-    @group = Group.find(param[:id])
+    @group = Group.find(params[:id])
   end
 
   def index
-    @group = Group.all
+    @groups = Group.all
   end
+
+  private 
+  	def group_params
+  		params.require(:group).permit(:title)
+  	end
 end
