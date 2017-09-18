@@ -9,6 +9,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <style>
+
+    li {
+        display: inline;
+        font-size: 175%;
+    }
+
+    </style>
   </head>
 
   <body>
@@ -27,15 +35,15 @@
                     <%= link_to "Schmack", root_url, class: "navbar-brand" %>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+                <div class = "collapse pull-right navbar-collapse" id = "bs-example-navbar-collapse-1">
+
                     <li>
                         <%= link_to "About", pages_about_path %>
                     </li>
 
-                    <% 
-=begin %>  <% <%- if current_user %>
+                    <%- if current_user %>
                     <li>
-                        <%= link_to "My Profile", my_profile_path %>
+                        <%= link_to "My Profile", user_path(@user) %>
                     </li>
                     <li>
                         <%= link_to "Logout", destroy_user_session_path, method: :delete,
@@ -50,9 +58,7 @@
                         <%= link_to "Register", new_user_registration_path %>
                     </li>
 
-                    <% end %>%>
-<% 
-=end %>
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
