@@ -1,11 +1,28 @@
 class ProfilesController < ApplicationController
-  def create
+  def new
     @profile = Profile.new
   end
 
-  def edit
+  def create
+  	@profile = Profile.new(profile_params)
+
+  	if @profile.save
+  		redirect_to @profile
+  	else
+  		render 'new'
+  	end
   end
 
-  def view
+  def show
+    @profile = Profile.find(params[:id])
   end
-end
+
+  def index
+    @profiles = Profile.all
+  end
+
+  private
+  	def profile_params
+  		params.require(:profile).permit(:first,:last,:year,:dorm)
+  	end
+  end
