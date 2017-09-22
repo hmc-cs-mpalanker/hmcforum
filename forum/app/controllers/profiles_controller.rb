@@ -1,6 +1,14 @@
 class ProfilesController < ApplicationController
   def new
-    @profile = Profile.new
+    if current_user
+      @profile = Profile.new
+      @exists = Profile.find_by_user_id(current_user.id)
+      if @exists
+        redirect_to @exists
+      end
+    else
+      redirect_to groups_path
+    end
   end
 
   def create
