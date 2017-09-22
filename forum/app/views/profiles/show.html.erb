@@ -1,8 +1,21 @@
-<h1>Profiles#view</h1>
-
+<h1><%= @profile.first %> <%= @profile.last %>'s Profile</h1>
 <p>
-<%= @profile.first %><br>
-<%= @profile.last %><br>
-<%= @profile.dorm %><br>
-<%= @profile.year %>
+<table style="width:30%">
+ <tr>
+   <td>Name:</td>
+   <td><%= @profile.first %> <%= @profile.last %></td>
+ </tr>
+ <tr>
+   <td>Email:</td>
+   <td><%= @user.email %></td>
+ </tr>
+ <tr>
+   <td>Dorm:</td>
+   <td><%= @profile.year %></td>
+ </tr>
+ <tr>
+   <td>Dorm:</td>
+   <td><%= @profile.dorm %></td>
+ </tr>
+</table>
 </p>
