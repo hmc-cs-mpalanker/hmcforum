@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917055929) do
+ActiveRecord::Schema.define(version: 20170918031251) do
 
   create_table "groups", force: :cascade do |t|
     t.string "title"
@@ -22,9 +22,22 @@ ActiveRecord::Schema.define(version: 20170917055929) do
     t.string "title"
     t.text "content"
     t.integer "group_id"
+    t.integer "profile_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_posts_on_group_id"
+    t.index ["profile_id"], name: "index_posts_on_profile_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "first"
+    t.string "last"
+    t.string "dorm"
+    t.string "year"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

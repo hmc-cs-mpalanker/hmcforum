@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :content
       t.belongs_to :group, index: true
-      t.belongs_to :user, index:true
+      t.belongs_to :profile, index:true
 
       t.timestamps
     end

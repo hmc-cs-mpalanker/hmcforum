@@ -1,0 +1,22 @@
+<h1>Profiles#create</h1>
+<p>Find me in app/views/profiles/create.html.erb</p>
+<%= form_with model: @profile, local: true do |f| %>
+	<div>
+    <%= f.label :first %>
+		<br><%= f.text_field :first %>
+		<br>
+		<%= f.label :last %>
+		<br><%= f.text_field :last %>
+		<br>
+    <%= f.label :dorm %>
+		<br><%= f.text_field :dorm %>
+		<br>
+		<%= f.label :year %>
+		<br><%= f.text_field :year %>
+		<br>
+		<%= f.hidden_field :user_id, value: current_user.id %>
+		<%= f.submit %>
+	</div>
+<%end%>
+
+<%= @exists %>
