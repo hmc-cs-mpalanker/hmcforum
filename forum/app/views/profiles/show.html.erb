@@ -1,5 +1,8 @@
 <h1><%= @profile.first %> <%= @profile.last %>'s Profile</h1>
 <p>
+  <%= image_tag @profile.avatar.url(:medium) %>
+</p>
+<p>
 <table style="width:30%">
  <tr>
    <td>Name:</td>
