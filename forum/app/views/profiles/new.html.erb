@@ -1,22 +1,25 @@
-<h1>Profiles#create</h1>
-<p>Find me in app/views/profiles/create.html.erb</p>
+<h1>Create Your Profile!</h1>
 <%= form_with model: @profile, local: true do |f| %>
 	<div>
-    <%= f.label :first %>
+    <%= f.label(:first, 'First Half of Name') %>
 		<br><%= f.text_field :first %>
 		<br>
-		<%= f.label :last %>
+		<br>
+		<%= f.label(:last, 'Last Half of Name') %>
 		<br><%= f.text_field :last %>
+		<br>
 		<br>
     <%= f.label :dorm %>
 		<br><%= f.text_field :dorm %>
 		<br>
-		<%= f.label :year %>
+		<br>
+		<%= f.label(:year, 'Class Year') %>
 		<br><%= f.text_field :year %>
 		<br>
 		<%= f.hidden_field :user_id, value: current_user.id %>
 		<br>
-  	<%= f.file_field :avatar %>
+			<%= f.label(:avatar, 'Profile Picture') %>
+  			<%= f.file_field :avatar, :class => "profilePhotoInput" %>
 		<br>
 		<%= f.submit %>
 	</div>
