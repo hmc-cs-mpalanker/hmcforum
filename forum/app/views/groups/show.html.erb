@@ -3,4 +3,10 @@
   <%= @group.title %>
 </p>
 
+<h2>Posts</h2>
+<%= render @group.posts %>
+
+<h2>New Post</h2>
+<%= render 'posts/form', group: @group %>
+
 <%= link_to 'Back', groups_path %>

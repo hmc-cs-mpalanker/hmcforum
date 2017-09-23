@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   get 'profiles/view'
 
   root 'groups#index'
-  resources :posts
-  resources :groups
+
+  resources :groups do 
+    resources :posts
+  end
+  
   resources :profiles
   devise_for :users
 

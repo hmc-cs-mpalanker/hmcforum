@@ -4,11 +4,11 @@
 
 * [Summary](#summary)
 * [Contributors](#contributors)
-* [MVP Objectives](#mvp_objectives)
+* [MVP Objectives](#mvpObjectives)
 * [Functionality](#functionality)
 * [Architecture](#architecture)
-* [Past Issues](#past_issues)
-* [Known Bugs](#known_bugs)
+* [Past Issues](#pastIssues)
+* [Known Bugs](#knownBugs)
 * [References](#references)
 
 ## Summary
