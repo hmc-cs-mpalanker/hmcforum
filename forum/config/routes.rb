@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'profiles/edit'
 
-  get 'profiles/view'
+  get 'profiles/show'
 
   root 'groups#index'
 
