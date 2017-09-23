@@ -27,12 +27,15 @@
                     <%= link_to "Schmack", root_url, class: "navbar-brand" %>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+                <div class = "nav navbar-nav navbar-right" id = "bs-example-navbar-collapse-1">
                     <li>
                         <%= link_to "About", pages_about_path %>
                     </li>
 
                     <%- if current_user %>
+                    <li>
+                        <%= link_to "My Profile", profiles_path(current_user) %>
+                    </li>
                     <li>
                         <%= link_to "Logout", destroy_user_session_path, method: :delete,
                         data:{ confirm: "Are you sure?" } %>

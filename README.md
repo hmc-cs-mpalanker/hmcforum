@@ -64,3 +64,9 @@ We utilize the Bare bootstrap template wih some modifications for the Navigation
 * Basic Rails setup: http://guides.rubyonrails.org/getting_started.html
 
 * Info about devise: https://github.com/plataformatec/devise/wiki
+
+* Info about resetting the databases: https://stackoverflow.com/questions/32082134/migrations-are-pending-to-resolve-this-issue-run-bin-rake-dbmigrate-rails-en
+
+* Info about navbar style found at: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp, https://stackoverflow.com/questions/19733447/bootstrap-navbar-with-left-center-and-right-aligned-items
+
+* Info about changing what the sign up button links to: https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-on-successful-sign-up-(registration), https://github.com/plataformatec/devise/wiki/How-To:-redirect-to-a-specific-page-on-successful-sign_in,-sign_out,-and-or-sign_up, https://stackoverflow.com/questions/18394001/ruby-on-rails-custom-devise-registration-controller-asking-for-create-action

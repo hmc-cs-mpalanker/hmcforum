@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'profiles/create'
+  get 'profiles/new'
 
   get 'profiles/edit'
 
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
   
   resources :profiles
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
 
   get 'pages/about'
 
