@@ -15,13 +15,7 @@
       </ul>
     </div>
   <% end %>
- 
-  <p>
-    <%= form.label :Title %><br>
-    <%= form.text_area :title%>
-  </p>
 
-  Posts:
   <p>
     <%= form.fields_for :posts do |posts_form| %>
       <div class="field">
@@ -39,6 +33,8 @@
       </div>
     <% end %>
   </p>
+
+  <%= form.hidden_field :title, id: :post_title %>
 
   <p>
     <%= form.submit :Post!%>
