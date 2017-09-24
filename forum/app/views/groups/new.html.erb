@@ -35,7 +35,7 @@
       </div>
 
       <div>
-        <%= posts_form.number_field :profile_id, :value => current_user.profile.id %>
+        <%= posts_form.hidden_field :profile_id, :value => current_user.profile.id %>
       </div>
     <% end %>
   </p>
