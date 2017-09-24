@@ -1,19 +1,29 @@
-<h1>Threads</h1>
+<h1>Schmack Threads</h1>
 
-<%- if current_user %>
-	<%= link_to 'New thread', new_group_path %>
-<% end %>
+<br />
  
 <table>
   <tr>
-    <th>Title</th>
     <th colspan="1"></th>
   </tr>
- 
   <% @groups.each do |group| %>
     <tr>
-      <td><%= group.title %></td>
-      <td><%= link_to 'Show', group_path(group) %></td>
+      <td>
+        <div class = "card">
+          <div class = "container">
+            <%= link_to group.title, group_path(group) %>
+          </div>
+        </div>
+        <br />
+      </td>
     </tr>
+
   <% end %>
 </table>
+
+<br />
+<br />
+
+<%- if current_user %>
+  <%= link_to 'Make a New Thread!', new_group_path %>
+<% end %>
