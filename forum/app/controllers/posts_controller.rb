@@ -31,7 +31,7 @@ class PostsController < ApplicationController
     @post = @group.posts.build(post_params)
 
     respond_to do |format|
-      if @post.save
+      if @post.save!
         format.html { redirect_to @group, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @group }
       else

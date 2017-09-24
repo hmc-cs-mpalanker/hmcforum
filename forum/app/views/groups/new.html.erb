@@ -20,7 +20,22 @@
     <%= form.label :Title %><br>
     <%= form.text_area :title%>
   </p>
- 
+
+  Posts:
+  <p>
+    <%= form.fields_for :posts do |posts_form| %>
+      <div class="field">
+        <%= posts_form.label :title %>
+        <%= posts_form.text_field :title, id: :post_title %>
+      </div>
+
+      <div class="field">
+        <%= posts_form.label :content %>
+        <%= posts_form.text_area :content, id: :post_content %>
+      </div>
+    <% end %>
+  </p>
+
   <p>
     <%= form.submit :Post!%>
   </p>

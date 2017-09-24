@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   def new
     @group = Group.new
+    @group.posts.build
   end
 
   def create 
@@ -23,6 +24,6 @@ class GroupsController < ApplicationController
 
   private 
   	def group_params
-  		params.require(:group).permit(:title)
+  		params.require(:group).permit(:title, posts_attributes: [:id, :title, :content])
   	end
 end
