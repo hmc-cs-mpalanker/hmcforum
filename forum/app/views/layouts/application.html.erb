@@ -33,9 +33,11 @@
                     </li>
 
                     <%- if current_user %>
-                    <li>
-                        <%= link_to "My Profile", profile_path(current_user.profile.id) %>
-                    </li>
+                        <%- if current_user.profile %>
+                        <li>
+                            <%= link_to "My Profile", profile_path(current_user.profile.id) %>
+                        </li>
+                        <% end %>
                     <li>
                         <%= link_to "Logout", destroy_user_session_path, method: :delete,
                         data:{ confirm: "Are you sure?" } %>

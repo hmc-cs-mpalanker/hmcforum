@@ -24,6 +24,6 @@ class GroupsController < ApplicationController
 
   private 
   	def group_params
-  		params.require(:group).permit(:title, posts_attributes: [:id, :title, :content])
+  		params.require(:group).permit(:title, posts_attributes: [:id, :title, :content, :profile_id])
   	end
 end

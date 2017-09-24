@@ -33,6 +33,10 @@
         <%= posts_form.label :content %>
         <%= posts_form.text_area :content, id: :post_content %>
       </div>
+
+      <div>
+        <%= posts_form.number_field :profile_id, :value => current_user.profile.id %>
+      </div>
     <% end %>
   </p>
 
