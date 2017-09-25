@@ -7,8 +7,8 @@
 * [MVP Objectives](#mvp-objectives)
 * [Functionality](#functionality)
 * [Architecture](#architecture)
-* [Past Issues](#pastIssues)
-* [Known Bugs](#knownBugs)
+* [Past Issues](#past-issues)
+* [Known Bugs](#known-bugs)
 * [References](#references)
 
 ## Summary
@@ -24,7 +24,6 @@ A website which allows communication between Mudders on the topics that are impo
 ## MVP objectives
 
 * Have a functional login system to create, delete, or edit posts
-* Have the ability (or requirement) to post an internym when creating a post.
 * Allow commenting on threads from members of the HMC community
 * Create a profile page that allows users to change their user names, names, and potentially add other information.
 * Have an About page.
@@ -37,15 +36,20 @@ A website which allows communication between Mudders on the topics that are impo
 * Ability to log-in to the website with an already created profile.
 * Ability to log-out of the website.
 * Once logged in, able to create threads and posts.
+* Avility to view existing threads and posts
 * There is an About page that explains the purpose of the website, lists authors, and answers some common questions.
 
 ## Architecture
 
-We utilize the Devise gem for collecting and using user data when it comes to registering for accounts and then making threads and posts with that account.
+In our architecture, we utilize four models: users, profiles, groups, and posts. 
 
-We utilize the Bare bootstrap template with some modifications for the Navigation Bar.
+Users were created using a Devise gem which also helped with basic functionality of registering, logging in, and logging out of your profile. Users store information about the user's email, password, and admin status among other things. Also,every user has a profile asscoiated with it. The profile contains more information about the user such as their first and last names, dorm, year and a profile picture. Profile pictures use the Paperclip gem which allows upploading and viewing images. Profiles also have many posts associated with them. Anyone can view a person's profile when they post on a thread. 
 
-We utilize the paperclip gem for allowing image/file uploading and viewing for profile pictures
+Another model that we use is a groups model which controls what on the front-end is known as groups. The most important feature of the groups model is that it has many posts. It also has a title attribute which is set by the first post associated with the group. 
+
+The last model in our architecture is posts. Posts have a title and contents, which is currently limited to text. They belong to both a group and a profile allowing them to be associated with the owner and displayed through the group. Once created, these are read only which allows people to have a record of what was said on any particular thread.
+
+We also set up a Navigation Bar using a modification of the Bare bootstrap template. We also have a pages controller to allow for the creation of static pages such as the about page linked the the Navigation Bar.
 
 ## Past Issues
 
