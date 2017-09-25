@@ -1,0 +1,28 @@
+<h1>Create Your Profile!</h1>
+<%= form_with model: @profile, local: true do |f| %>
+	<div>
+    <%= f.label(:first, 'First Half of Name') %>
+		<br><%= f.text_field :first %>
+		<br>
+		<br>
+		<%= f.label(:last, 'Last Half of Name') %>
+		<br><%= f.text_field :last %>
+		<br>
+		<br>
+    <%= f.label :dorm %>
+		<br><%= f.text_field :dorm %>
+		<br>
+		<br>
+		<%= f.label(:year, 'Class Year') %>
+		<br><%= f.text_field :year %>
+		<br>
+		<%= f.hidden_field :user_id, value: current_user.id %>
+		<br>
+			<%= f.label(:avatar, 'Profile Picture') %>
+  			<%= f.file_field :avatar, :class => "profilePhotoInput" %>
+		<br>
+		<%= f.submit %>
+	</div>
+<%end%>
+
+<%= @exists %>

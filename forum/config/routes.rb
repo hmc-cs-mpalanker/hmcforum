@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'profiles/new'
+
+  get 'profiles/edit'
+
+  get 'profiles/show'
+
+  get 'profiles/upgradeUser'
+
   root 'groups#index'
-  resources :posts 
-  resources :groups
-  devise_for :users
+
+  resources :groups do
+    resources :posts
+  end
+
+  resources :profiles
+  devise_for :users, controllers: { registrations: "registrations" }
 
   get 'pages/about'
 

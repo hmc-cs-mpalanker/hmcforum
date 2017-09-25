@@ -1,10 +1,13 @@
 class GroupsController < ApplicationController
   def new
     @group = Group.new
+    @group.posts.build
   end
 
   def create 
-		@group = Group.new(group_params) 
+    params[:group][:title] = params[:group][:posts_attributes]['0'][:title]
+
+    @group = Group.new(group_params) 
 
 		if @group.save
 			redirect_to @group
@@ -23,6 +26,6 @@ class GroupsController < ApplicationController
 
   private 
   	def group_params
-  		params.require(:group).permit(:title)
+  		params.require(:group).permit(:title, posts_attributes: [:id, :title, :content, :profile_id])
   	end
 end

@@ -15,12 +15,27 @@
       </ul>
     </div>
   <% end %>
- 
+
   <p>
-    <%= form.label :Title %><br>
-    <%= form.text_area :title%>
+    <%= form.fields_for :posts do |posts_form| %>
+      <div class="field">
+        <%= posts_form.label :title %>
+        <%= posts_form.text_field :title, id: :post_title %>
+      </div>
+
+      <div class="field">
+        <%= posts_form.label :content %>
+        <%= posts_form.text_area :content, id: :post_content %>
+      </div>
+
+      <div>
+        <%= posts_form.hidden_field :profile_id, :value => current_user.profile.id %>
+      </div>
+    <% end %>
   </p>
- 
+
+  <%= form.hidden_field :title, id: :post_title %>
+
   <p>
     <%= form.submit :Post!%>
   </p>
