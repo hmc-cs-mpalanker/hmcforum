@@ -6,12 +6,14 @@ Rails.application.routes.draw do
 
   get 'profiles/show'
 
+  get 'profiles/upgradeUser'
+
   root 'groups#index'
 
-  resources :groups do 
+  resources :groups do
     resources :posts
   end
-  
+
   resources :profiles
   devise_for :users, controllers: { registrations: "registrations" }
 
