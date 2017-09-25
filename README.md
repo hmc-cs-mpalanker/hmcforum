@@ -74,3 +74,11 @@ We utilize the Bare bootstrap template wih some modifications for the Navigation
 * Info on how to create properly capitalized label titles: https://stackoverflow.com/questions/12724180/why-does-f-label-transform-all-caps-string-to-all-caps
 
 * Info for the CSS for cards was found at: https://www.w3schools.com/howto/howto_css_cards.asp
+
+* Info for font-size in CSS found at: https://css-tricks.com/almanac/properties/f/font-size/
+
+* Info for text-styling in CSS found at: https://www.w3schools.com/cssref/pr_text_text-decoration.asp
+
+* Info for text-aligning found at: https://www.w3schools.com/cssref/pr_text_text-align.asp
+
+* Info for text-overflow found at: https://www.w3schools.com/cssref/css3_pr_text-overflow.asp

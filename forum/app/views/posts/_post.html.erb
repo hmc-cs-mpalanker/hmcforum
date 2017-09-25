@@ -1,21 +1,30 @@
+<!-- This file handles the styling for the individual posts in individual threads. -->
+
 <p>
   <table>
     <tr>
       <td>
-        <strong>Profile:</strong>
-        <%= post.profile.first %>
-        <%= post.profile.last %>
-        <br>
-        <%= post.profile.user.email %>
-        <br>
-        <%= image_tag post.profile.avatar.url(:thumb) %>
+        <div class = "profile-card">
+          <div class = "content">
+            <strong>
+              <%= post.profile.first %>
+              <%= post.profile.last %>
+            </strong>
+            <br>
+            <%= post.profile.user.email %>
+            <br>
+            <%= image_tag post.profile.avatar.url(:thumb) %>
+          </div>
+        </div>
       </td>
       <td>
-        <strong>Title:</strong>
-        <%= post.title %>
-        <br>
-        <strong>Body:</strong>
-        <%= post.content %>
+        <div class = "card">
+          <div class = "content">
+            <u><strong><%= post.title %></strong></u>
+            <br>
+            <%= post.content %>
+          </div>
+        </div>
       </td>
     </tr>
   </table>

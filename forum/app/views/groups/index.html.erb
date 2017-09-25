@@ -1,3 +1,5 @@
+<!-- This file handles the front page lay-out that lists all of the different Schmack Threads. -->
+
 <h1>Schmack Threads</h1>
 
 <br />
@@ -9,8 +11,8 @@
   <% @groups.each do |group| %>
     <tr>
       <td>
-        <div class = "card">
-          <div class = "container">
+        <div class = "front-card">
+          <div class = "front-content">
             <%= link_to group.title, group_path(group) %>
           </div>
         </div>
