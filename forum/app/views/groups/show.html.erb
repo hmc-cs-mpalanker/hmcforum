@@ -4,7 +4,9 @@
 
 <%= render @group.posts %>
 
-<h2>New Post</h2>
-<%= render 'posts/form', group: @group %>
+<%- if current_user %>
+  <h2>New Post</h2>
+  <%= render 'posts/form', group: @group %>
+<% end %>
 
 <%= link_to 'Back', groups_path %>

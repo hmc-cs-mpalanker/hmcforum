@@ -1,7 +1,22 @@
 <p>
-  <strong>Title:</strong>
-  <%= post.title %>
-
-  <strong>Body:</strong>
-  <%= post.content %>
+  <table>
+    <tr>
+      <td>
+        <strong>Profile:</strong>
+        <%= post.profile.first %>
+        <%= post.profile.last %>
+        <br>
+        <%= post.profile.user.email %>
+        <br>
+        <%= image_tag post.profile.avatar.url(:thumb) %>
+      </td>
+      <td>
+        <strong>Title:</strong>
+        <%= post.title %>
+        <br>
+        <strong>Body:</strong>
+        <%= post.content %>
+      </td>
+    </tr>
+  </table>
 </p>
