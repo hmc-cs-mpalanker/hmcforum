@@ -37,7 +37,6 @@ A website which allows communication between Mudders on the topics that are impo
 * Ability to log-in to the website with an already created profile.
 * Ability to log-out of the website.
 * Once logged in, able to create threads and posts.
-Screen Shot 2017-09-24 at 9.16.07 PM
 * There is an About page that explains the purpose of the website, lists authors, and answers some common questions.
 
 ## Architecture
