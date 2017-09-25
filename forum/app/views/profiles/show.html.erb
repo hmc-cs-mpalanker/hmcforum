@@ -3,24 +3,26 @@
   <%= image_tag @profile.avatar.url(:medium) %>
 </p>
 <p>
+  <div class = "profile-display">
 <table style="width:30%">
  <tr>
-   <td>Name:</td>
+   <td><strong>Name:</strong></td>
    <td><%= @profile.first %> <%= @profile.last %></td>
  </tr>
  <tr>
-   <td>Email:</td>
+   <td><strong>Email:</strong></td> 
    <td><%= @user.email %></td>
  </tr>
  <tr>
-   <td>Dorm:</td>
+   <td><strong>Year:</strong></td>
    <td><%= @profile.year %></td>
  </tr>
  <tr>
-   <td>Dorm:</td>
+   <td><strong>Dorm:</strong></td>
    <td><%= @profile.dorm %></td>
  </tr>
 </table>
+</div>
 </p>
 
 <%- if current_user %>
