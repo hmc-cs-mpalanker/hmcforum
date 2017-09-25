@@ -5,8 +5,6 @@ class GroupsController < ApplicationController
   end
 
   def create 
-
-
     params[:group][:title] = params[:group][:posts_attributes]['0'][:title]
 
     @group = Group.new(group_params) 

@@ -2,7 +2,7 @@
   <table>
     <tr>
       <td>
-        <strong>Profile:</strong>
+        <strong><%= link_to 'Profile:', profile_path(post.profile) %></strong>
         <%= post.profile.first %>
         <%= post.profile.last %>
         <br>
