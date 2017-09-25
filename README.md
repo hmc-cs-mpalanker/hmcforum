@@ -33,11 +33,28 @@ A website which allows communication between Mudders on the topics that are impo
 ## Functionality
 
 * Ability to register with the website and create a profile.
+
+https://user-images.githubusercontent.com/25189930/30792408-f63da226-a16e-11e7-8e3a-adc08b0b6c93.png
+
+https://user-images.githubusercontent.com/25189930/30792407-f63bf3ae-a16e-11e7-887a-a2b6e2320d24.png
+
 * Ability to upload a profile picture to your profile.
+
+https://user-images.githubusercontent.com/25189930/30792403-f6274530-a16e-11e7-9ac8-950c8b1476e5.png
+
 * Ability to log-in to the website with an already created profile.
+
+https://user-images.githubusercontent.com/25189930/30792404-f62847aa-a16e-11e7-83c9-3102477555bb.png
+
 * Ability to log-out of the website.
+
 * Once logged in, able to create threads and posts.
+
+https://user-images.githubusercontent.com/25189930/30792406-f63972d2-a16e-11e7-98f5-cdf5f156df23.png
+
 * There is an About page that explains the purpose of the website, lists authors, and answers some common questions.
+
+https://user-images.githubusercontent.com/25189930/30792405-f62934f8-a16e-11e7-9a73-a2d93fe7a768.png
 
 ## Architecture
 
