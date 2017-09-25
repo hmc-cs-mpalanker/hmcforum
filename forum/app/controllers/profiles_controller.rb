@@ -30,6 +30,20 @@ class ProfilesController < ApplicationController
     @profiles = Profile.all
   end
 
+  def upgradeUser
+    if current_user
+      if current_user.admin
+        @profile = Profile.find(params[:id])
+        @user = User.find(@profile.user_id)
+        if !@user.admin
+          @user.admin = true
+          @user.save
+        end
+      end
+    end
+    redirect_to @profile
+  end
+
   private
   	def profile_params
   		params.require(:profile).permit(:first,:last,:year,:dorm, :user_id,:avatar)

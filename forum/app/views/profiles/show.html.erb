@@ -22,3 +22,15 @@
  </tr>
 </table>
 </p>
+
+<%- if current_user %>
+  <%- if current_user.admin %>
+    <strong> You're an admin </strong><br>
+    <%- if @user.admin %>
+      <strong> This user is already an admin </strong>
+    <%- else %>
+      <strong> This users is not an admin </strong>
+    <% end %><br>
+    <%= link_to 'Upgrade user to Admin', profiles_upgradeUser_path(:id => @profile.id), method: :get %>
+  <% end %>
+<% end %>

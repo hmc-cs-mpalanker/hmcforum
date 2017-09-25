@@ -6,10 +6,9 @@
       <td>
         <div class = "profile-card">
           <div class = "content">
-            <strong>
+            <strong><%= link_to 'Profile:', profile_path(post.profile) %></strong>
               <%= post.profile.first %>
               <%= post.profile.last %>
-            </strong>
             <br>
             <%= post.profile.user.email %>
             <br>

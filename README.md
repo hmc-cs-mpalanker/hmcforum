@@ -4,7 +4,7 @@
 
 * [Summary](#summary)
 * [Contributors](#contributors)
-* [MVP Objectives](#mvpObjectives)
+* [MVP Objectives](#mvp-objectives)
 * [Functionality](#functionality)
 * [Architecture](#architecture)
 * [Past Issues](#pastIssues)
@@ -33,15 +33,19 @@ A website which allows communication between Mudders on the topics that are impo
 ## Functionality
 
 * Ability to register with the website and create a profile.
-* Ability to log-in to the website with an already created profile. 
+* Ability to upload a profile picture to your profile.
+* Ability to log-in to the website with an already created profile.
 * Ability to log-out of the website.
-* There is an About page that explains the purpose of the webiste, lists authors, and answers some common questions.
+* Once logged in, able to create threads and posts.
+* There is an About page that explains the purpose of the website, lists authors, and answers some common questions.
 
 ## Architecture
 
 We utilize the Devise gem for collecting and using user data when it comes to registering for accounts and then making threads and posts with that account.
 
-We utilize the Bare bootstrap template wih some modifications for the Navigation Bar.
+We utilize the Bare bootstrap template with some modifications for the Navigation Bar.
+
+We utilize the paperclip gem for allowing image/file uploading and viewing for profile pictures
 
 ## Past Issues
 
@@ -49,6 +53,8 @@ We utilize the Bare bootstrap template wih some modifications for the Navigation
 * We had some merge conflicts with regards to the Devise database set-up and the default Ruby on Rails set-up. Minor edits were made to both files to merge the conflicts.
 
 ## Known Bugs
+
+If you register an Account but don't create a profile much of the site breaks
 
 ## References
 
