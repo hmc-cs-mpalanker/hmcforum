@@ -11,7 +11,7 @@ class GroupsController < ApplicationController
 
     @group = Group.new(group_params) 
 
-		if @group.save!
+		if @group.save
 			redirect_to @group
 		else
 			render 'new'

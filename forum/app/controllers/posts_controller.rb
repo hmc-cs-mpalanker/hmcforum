@@ -32,11 +32,11 @@ class PostsController < ApplicationController
     @post = @group.posts.build(post_params)
 
     respond_to do |format|
-      if @post.save!
+      if @post.save
         format.html { redirect_to @group, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @group }
       else
-        format.html { render :new }
+        format.html { redirect_to @group, notice: 'Post was not successful, make sure you enter all fields.' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
