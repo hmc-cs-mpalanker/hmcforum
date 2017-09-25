@@ -31,10 +31,16 @@ class ProfilesController < ApplicationController
   end
 
   def upgradeUser
-    @profile = Profile.find(params[:id])
-    @user = User.find(@profile.user_id)
-    @user.admin = true
-    @user.save
+    if current_user
+      if current_user.admin
+        @profile = Profile.find(params[:id])
+        @user = User.find(@profile.user_id)
+        if !@user.admin
+          @user.admin = true
+          @user.save
+        end
+      end
+    end
     redirect_to @profile
   end
 
